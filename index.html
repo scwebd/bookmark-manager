@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <title>Boot Camp Bookmark Manager</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md mt-2 mb-2">
+                <h1>Boot Camp Bookmark Manager</h1>
+                <div class="form-group">
+                    <label for="filter-topic" class="sr-only">Select a Topic to View Related Bookmarks:</label>
+                    <select class="form-control" id="filter-topic">
+                        <option>Select a Topic to View Related Bookmarks:</option>
+                        <option value="HTML">HTML</option>
+                        <option value="Git">Git</option>
+                        <option value="Terminal">Terminal</option>
+                        <option value="CSS">CSS</option>
+                        <option value="Bootstrap">Bootstrap</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="jQuery">jQuery</option>
+                        <option value="AJAX">AJAX/APIs</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-md-7">
+                <h2>Bookmarks for <span id="topic"></span>:</h2>
+                <table class="table table-striped" id="bookmarks-table">
+                    <thead class="sr-only">
+                        <tr>
+                            <th>Bookmark</th>
+                            <th>Delete?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-5">
+                <h2>Add a New Bookmark:</h2>
+                <form id="add-bookmark-form">
+                    <div class="form-group">
+                        <label for="bookmark-name">Bookmark Name:</label>
+                        <input type="text" class="form-control" id="bookmark-name" placeholder="Bookmark Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="bookmark-link">Bookmark Link:</label>
+                        <input type="text" class="form-control" id="bookmark-url" placeholder="Bookmark Link URL">
+                    </div>
+                    <div class="form-group">
+                        <label for="bookmark-topic">Bookmark Topic:</label>
+                        <select class="custom-select custom-select-sm" id="bookmark-topic">
+                            <option>Select a Topic</option>
+                            <option value="HTML">HTML</option>
+                            <option value="Git">Git</option>
+                            <option value="Terminal">Terminal</option>
+                            <option value="CSS">CSS</option>
+                            <option value="Bootstrap">Bootstrap</option>
+                            <option value="JavaScript">JavaScript</option>
+                            <option value="jQuery">jQuery</option>
+                            <option value="AJAX">AJAX/APIs</option>
+                        </select>
+                    </div>
+                    <button type="submit" id="bookmark-submit" class="btn btn-primary btn-block">Add Bookmark</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
