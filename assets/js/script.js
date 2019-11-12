@@ -77,6 +77,12 @@ document.getElementById("bookmark-submit").addEventListener("click", function(ev
     var name = document.getElementById("bookmark-name").value;
     var url = document.getElementById("bookmark-url").value;
     var topic = document.getElementById("bookmark-topic").value;
+
+    if (!topic) {
+        alert("Specify a topic and then submit again!");
+        return false;
+    }
+
     document.getElementById("add-bookmark-form").reset(); // clearing out/resetting the form after info is collected
 
     var newBookmark = {
