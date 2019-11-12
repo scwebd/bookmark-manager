@@ -78,7 +78,7 @@ document.getElementById("bookmark-submit").addEventListener("click", function(ev
     var url = document.getElementById("bookmark-url").value;
     var topic = document.getElementById("bookmark-topic").value;
 
-    if (!topic) {
+    if (!topic) { // if no topic is specified, alert user and break out of function
         alert("Specify a topic and then submit again!");
         return false;
     }
